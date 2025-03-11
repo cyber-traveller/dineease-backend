@@ -1,0 +1,108 @@
+ [
+      {
+        "name": "The Spice Garden",
+        "description": "An authentic Indian restaurant offering a rich blend of traditional and modern Indian cuisine",
+        "address": {
+          "street": "456 Curry Lane",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "zipCode": "400001",
+          "country": "India",
+          "coordinates": [72.8777, 19.0760]
+        },
+        "cuisine": ["Indian", "Vegetarian", "Curry"],
+        "priceRange": "$$",
+        "images": [
+          {
+            "url": "https://assets.architecturaldigest.in/photos/6385cf3311f0276636badfb6/16:9/w_2560%2Cc_limit/DSC_8367-Edit-W.png",
+            "caption": "Traditional Indian Thali"
+          },
+          {
+            "url": "https://b.zmtcdn.com/data/pictures/3/20479933/62319469fb1c7545fa99575ae5d2f5e9.jpg",
+            "caption": "Restaurant Interior"
+          }
+        ],
+        "openingHours": {
+          "monday": { "open": "11:00", "close": "22:00" },
+          "tuesday": { "open": "11:00", "close": "22:00" },
+          "wednesday": { "open": "11:00", "close": "22:00" },
+          "thursday": { "open": "11:00", "close": "22:00" },
+          "friday": { "open": "11:00", "close": "23:00" },
+          "saturday": { "open": "11:00", "close": "23:00" },
+          "sunday": { "open": "12:00", "close": "22:00" }
+        },
+        "features": ["Outdoor Seating", "Wifi", "Parking"],
+        "status": "active"
+      },
+      {
+        "name": "Pasta Paradise",
+        "description": "Authentic Italian restaurant specializing in homemade pasta and wood-fired pizzas",
+        "address": {
+          "street": "789 Pizza Avenue",
+          "city": "Rome",
+          "state": "Lazio",
+          "zipCode": "00100",
+          "country": "Italy",
+          "coordinates": [12.4964, 41.9028]
+        },
+        "cuisine": ["Italian", "Mediterranean", "Pizza"],
+        "priceRange": "$$$",
+        "images": [
+          {
+            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC3h3RZafMedIcBkHl88q5XbRAyst94_Rlew&s",
+            "caption": "Homemade Pasta"
+          },
+          {
+            "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/56/71/59/atmosphere.jpg?w=600&h=-1&s=1",
+            "caption": "Wood-fired Pizza"
+          }
+        ],
+        "openingHours": {
+          "monday": { "open": "12:00", "close": "22:00" },
+          "tuesday": { "open": "12:00", "close": "22:00" },
+          "wednesday": { "open": "12:00", "close": "22:00" },
+          "thursday": { "open": "12:00", "close": "22:00" },
+          "friday": { "open": "12:00", "close": "23:00" },
+          "saturday": { "open": "12:00", "close": "23:00" },
+          "sunday": { "open": "12:00", "close": "21:00" }
+        },
+        "features": ["Private Dining", "Bar", "Live Music"],
+        "status": "active"
+      },
+      {
+        "name": "Sushi Master",
+        "description": "Premium Japanese dining experience with fresh sushi and sashimi",
+        "address": {
+          "street": "123 Sushi Street",
+          "city": "Tokyo",
+          "state": "Tokyo",
+          "zipCode": "100-0005",
+          "country": "Japan",
+          "coordinates": [139.6503, 35.6762]
+        },
+        "cuisine": ["Japanese", "Sushi", "Asian"],
+        "priceRange": "$$$$",
+        "images": [
+          {
+            "url": "https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg",
+            "caption": "Premium Sushi Platter"
+          },
+          {
+            "url": "https://static.toiimg.com/photo/71009170.cms",
+            "caption": "Traditional Japanese Setting"
+          }
+        ],
+        "openingHours": {
+          "monday": { "open": "11:30", "close": "21:30" },
+          "tuesday": { "open": "11:30", "close": "21:30" },
+          "wednesday": { "open": "11:30", "close": "21:30" },
+          "thursday": { "open": "11:30", "close": "21:30" },
+          "friday": { "open": "11:30", "close": "22:30" },
+          "saturday": { "open": "11:30", "close": "22:30" },
+          "sunday": { "open": "12:00", "close": "21:00" }
+        },
+        "features": ["Private Dining", "Wifi"],
+        "status": "active"
+      }
+    ]
+    

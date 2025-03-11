@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "_id": "user1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "$2a$10$hashedpassword",
+      "role": "user",
+      "phoneNumber": "+1234567890",
+      "createdAt": "2023-11-15T10:00:00Z",
+      "updatedAt": "2023-11-15T10:00:00Z"
+    },
+    {
+      "_id": "owner1",
+      "name": "Restaurant Owner",
+      "email": "owner@restaurant.com",
+      "password": "$2a$10$hashedpassword",
+      "role": "restaurant_owner",
+      "phoneNumber": "+1987654321",
+      "createdAt": "2023-11-15T09:00:00Z",
+      "updatedAt": "2023-11-15T09:00:00Z"
+    }
+  ],
+  "restaurants": [
+    {
+      "_id": "rest1",
+      "name": "Gourmet Fusion",
+      "description": "Experience the perfect blend of international cuisines",
+      "address": {
+        "street": "123 Foodie Lane",
+        "city": "Culinary City",
+        "state": "Gastronomy",
+        "zipCode": "12345",
+        "country": "Foodland",
+        "coordinates": {
+          "latitude": 40.7128,
+          "longitude": -74.0060
+        }
+      },
+      "cuisine": ["Italian", "Asian", "French"],
+      "priceRange": "$$$",
+      "images": [
+        {
+          "url": "https://example.com/restaurant1.jpg",
+          "caption": "Main Dining Area"
+        }
+      ],
+      "openingHours": {
+        "monday": { "open": "11:00", "close": "22:00" },
+        "tuesday": { "open": "11:00", "close": "22:00" },
+        "wednesday": { "open": "11:00", "close": "22:00" },
+        "thursday": { "open": "11:00", "close": "23:00" },
+        "friday": { "open": "11:00", "close": "23:00" },
+        "saturday": { "open": "12:00", "close": "23:00" },
+        "sunday": { "open": "12:00", "close": "22:00" }
+      },
+      "owner": "owner1",
+      "rating": 4.5,
+      "reviewCount": 128,
+      "features": ["Outdoor Seating", "Wifi", "Bar"],
+      "status": "active",
+      "createdAt": "2023-11-01T08:00:00Z",
+      "updatedAt": "2023-11-15T14:30:00Z"
+    }
+  ],
+  "reservations": [
+    {
+      "_id": "res1",
+      "user": "user1",
+      "restaurant": "rest1",
+      "date": "2023-12-25",
+      "time": "19:00",
+      "partySize": 4,
+      "specialRequests": "Window table preferred",
+      "status": "confirmed",
+      "payment": {
+        "amount": 1000,
+        "status": "completed",
+        "transactionId": "pay_123456",
+        "paidAt": "2023-12-24T15:30:00Z"
+      },
+      "createdAt": "2023-12-20T10:00:00Z",
+      "updatedAt": "2023-12-24T15:30:00Z"
+    }
+  ],
+  "reviews": [
+    {
+      "_id": "rev1",
+      "user": "user1",
+      "restaurant": "rest1",
+      "rating": 5,
+      "comment": "Exceptional dining experience! The fusion dishes were creative and delicious.",
+      "images": ["https://example.com/review1.jpg"],
+      "status": "approved",
+      "likes": ["user2", "user3"],
+      "replies": [
+        {
+          "_id": "reply1",
+          "user": "owner1",
+          "comment": "Thank you for your wonderful review! We're glad you enjoyed your experience.",
+          "createdAt": "2023-12-26T09:15:00Z"
+        }
+      ],
+      "createdAt": "2023-12-26T08:00:00Z",
+      "updatedAt": "2023-12-26T09:15:00Z"
+    }
+  ]
+}
