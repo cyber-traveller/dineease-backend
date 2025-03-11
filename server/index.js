@@ -5,22 +5,23 @@ import mongoose from 'mongoose';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
+// Resolve __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Ensure .env is loaded correctly
-const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
-dotenv.config({ path: join(dirname(__dirname), envFile) });
+// Load .env file
+dotenv.config({ path: join(__dirname, '.env') });
 
-// Debugging: Check if required environment variables are loaded
-const requiredEnvVars = [
-  'MONGODB_URI',
-  'JWT_SECRET',
-  'RAZORPAY_KEY_ID',
-  'RAZORPAY_KEY_SECRET',
-  'CLIENT_URL'
-];
+// Debugging: Log loaded environment variables
+console.log('🔍 NODE_ENV:', process.env.NODE_ENV);
+console.log('🔍 MONGODB_URI:', process.env.MONGODB_URI ? '✅ Loaded' : '❌ Missing');
+console.log('🔍 JWT_SECRET:', process.env.JWT_SECRET ? '✅ Loaded' : '❌ Missing');
+console.log('🔍 RAZORPAY_KEY_ID:', process.env.RAZORPAY_KEY_ID ? '✅ Loaded' : '❌ Missing');
+console.log('🔍 RAZORPAY_KEY_SECRET:', process.env.RAZORPAY_KEY_SECRET ? '✅ Loaded' : '❌ Missing');
+console.log('🔍 CLIENT_URL:', process.env.CLIENT_URL ? '✅ Loaded' : '❌ Missing');
 
+// Check for missing required variables
+const requiredEnvVars = ['MONGODB_URI', 'JWT_SECRET', 'RAZORPAY_KEY_ID', 'RAZORPAY_KEY_SECRET', 'CLIENT_URL'];
 const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
 
 if (missingEnvVars.length > 0) {
@@ -44,8 +45,9 @@ app.use(express.json());
 // Trust proxy for secure cookies in production
 app.set('trust proxy', 1);
 
-// MongoDB Connection
+// MongoDB Connection with retry logic
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/dineease';
+
 const connectWithRetry = () => {
   mongoose.connect(MONGODB_URI, {
     serverSelectionTimeoutMS: 5000,
